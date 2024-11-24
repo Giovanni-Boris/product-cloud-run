@@ -8,7 +8,7 @@ import { ProductDto } from "src/models/requests/product-dto.model";
 
 @Injectable()
 export class ProductClient {
-  private readonly schemaDefault = config.SCHEMA_DEFAULT;
+  private readonly schemaDefault = `${config.SCHEMA_DEFAULT}://`;
   private readonly host = config.API.PRODUCT.HOST;
   private readonly port = `:${config.API.PRODUCT.PORT}`;
   private readonly basePath = config.API.PRODUCT.BASE_PATH;
