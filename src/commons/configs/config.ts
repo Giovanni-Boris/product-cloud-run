@@ -2,7 +2,7 @@ import { IAppConfig } from "../../models/interfaces/app-config.interface";
 
 export const config: IAppConfig = {
   PORT: parseInt(process.env.PORT ?? "0", 10),
-  SCHEMA_DEFAULT: process.env.SCHEMA_DEFAULT,
+  SCHEMA_DEFAULT: process.env.SCHEMA_DEFAULT ?? "",
   HTTP: {
     DELAY_BETWEEN_RETRIES: parseInt(process.env.HTTP_DELAY_BETWEEN_RETRIES_MS ?? "0"),
     MAX_REDIRECT: parseInt(process.env.HTTP_MAX_REDIRECT ?? "0"),
